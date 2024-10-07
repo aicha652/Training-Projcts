@@ -1,0 +1,14 @@
+body {
+    background-color: aquamarine;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 20% 25%;
+    height: 200px;
+    width: 50%;
+    border-radius: 8px;
+}
