@@ -1,0 +1,60 @@
+body {
+    background-color: aquamarine;
+}
+
+.container {
+    width: 550px;
+    height: 250px;
+    background-color: rgb(250, 242, 233);
+    margin: 20% 30%;
+    border-radius: 15px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    border: 15px solid aliceblue;
+}
+
+img {
+    width: 90px;
+    height: 100px;
+    border-radius: 80%;
+    padding: 10px;
+    border: 0.3px  gray;
+    background-color: rgb(201, 198, 198);
+}
+
+.informations {
+    margin-left: 20px;
+}
+
+.job {
+    margin-top: -20px;
+    color: gray;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-color: none;
+}
+
+h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.FollowBtn {
+    background-color: aqua;
+}
+
+.ProfileBtn {
+    background-color: rgb(248, 192, 128);
+}
+
+.numbers {
+    font-size: small;
+}
