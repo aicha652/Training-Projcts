@@ -3,30 +3,50 @@ import axios from 'axios'
 import "./App.css"
 
 function App() {
-  //const url = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d41ad370afa18d87db4dd3a08785231d"
+  
+  const [data, setData] = useState({})
+  const [location, setLocation] =useState("")
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},uk&APPID=d41ad370afa18d87db4dd3a08785231d`
+
+  const searchLocation = event => {
+    if(event.key === "Enter") {
+      axios.get(url).then((response) =>{
+        setData(response.data)
+      }).catch((error) => {
+        alert(error.response.data.message)
+      })
+    }
+  }
+  
+
   return (
     <div className="container">
-      <input type="text" placeholder='Enter Location' />
+      <input
+      value={location}
+      onChange={event => setLocation(event.target.value)}
+      onKeyPress={searchLocation}
+      type="text" placeholder='Enter Location' />
       <div className='top'>
         <div className='location'>
-          <p>Denver</p>
+          <p>{data.name}</p>
         </div>
-        <div className='temp'>33°F</div>
+        <div className='temp'>{data.main? data.main.temp : null}°F</div>
         <div className='description'>
-          <p>Clear</p>
+          <p>{data.weather? data.weather[0].main : null}</p>
         </div>
       </div>
       <div className='bottom'>
         <div className='feels'>
-          <p className='bold'>30°F</p>
+          <p className='bold'>{data.main? data.main.feels_like : null}°F</p>
           <p>Feels Like</p>
         </div>
         <div className='humidity'>
-          <p className='bold'>63%</p>
+          <p className='bold'>{data.main? data.main.humidity : null}%</p>
           <p>Humidity</p>
         </div>
         <div className='wind'>
-          <p className='bold'>3 MPH</p>
+          <p className='bold'>{data.wind ? data.wind.speed : null}MPH</p>
           <p>Wind Speed</p>
         </div>
       </div>

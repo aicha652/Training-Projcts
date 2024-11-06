@@ -38,7 +38,7 @@ input {
     position: relative;
     font-size: large;
     font-weight:700;
-    right: -180%;
+    right: -130%;
     transform-origin: 0 0;
     transform: rotate(269deg);
 }
