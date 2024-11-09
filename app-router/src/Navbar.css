@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+.links {
+    text-decoration: none;
+    font-size: 15px;
+    height: 70px;
+    padding-top: 30px;
+}
